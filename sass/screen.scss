@@ -1,0 +1,319 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@font-face {
+    font-family: 'futura_ltbold';
+    src: url('../font/futuralt-bold-webfont.eot');
+    src: url('../font/futuralt-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/futuralt-bold-webfont.woff2') format('woff2'),
+         url('../font/futuralt-bold-webfont.woff') format('woff'),
+         url('../font/futuralt-bold-webfont.ttf') format('truetype'),
+         url('../font/futuralt-bold-webfont.svg#futura_ltbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ColdSpaghettiBTN';
+    src: url('../font/ColdSpaghettiBTN.eot');
+    src: url('../font/ColdSpaghettiBTN.otf')  format('opentype'),
+    	 url('../ColdSpaghettiBTN.ttf')  format('truetype'),
+    	 url('../ColdSpaghettiBTN.svg#ColdSpaghettiBTN')  format('svg');
+
+}
+
+$cyan : #97d0d1;
+$yellow : #FDE9AA;
+
+*{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ui{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.wrapper{
+	position:relative;
+}
+
+canvas{
+	overflow:hidden;
+	vertical-align: bottom
+}
+
+.grad{
+	width:100%;
+	height: 2160px;
+}
+
+//intro
+
+#ui-intro{
+	background-color: $yellow;
+    
+	#intro-sun{
+		    background-image: url("../textures/intro/sun_intro.png");
+		    height: 300px;
+		    width: 300px;
+		    background-size: contain;
+		    background-repeat: no-repeat;
+		    right: 0;
+		    top: 0;
+		    position: absolute;
+	}
+
+	#intro-clouds-1{
+		    background-image: url("../textures/intro/clouds_1.png");
+		    height: 100%;
+		    width: 100%;
+		    background-size: contain;
+		    background-repeat: no-repeat;
+		    position: absolute;
+	}
+
+	#intro-clouds-2{
+		    background-image: url("../textures/intro/clouds_2.png");
+		    height: 100%;
+		    width: 100%;
+		    background-size: contain;
+		    background-repeat: no-repeat;
+		    position: absolute;
+	}
+
+	#intro-text{
+		color: #ffa879;
+		text-align: center;
+	    top: 40%;
+	    position: absolute;
+	    width: 100%;
+	}
+
+}
+
+#ui-laptop{
+	.instructions{
+	    font-family: 'futura_ltbold';
+	    position: absolute;
+	    width: 100%;
+	    top: 50%;
+	    font-size: 6vw;
+	    color: white;
+	    text-align: center;
+	}
+}
+
+#ui-car{
+
+	.instructions{
+	    font-family: 'futura_ltbold';
+	    position: absolute;
+	    width: 45%;
+	    top: 50%;
+	    font-size: 6vw;
+	    color: white;
+	    text-align: center;
+	    margin-left: 27.5%;
+	    margin-right: 27.5%;
+
+		
+		h1{
+			padding: 20px;
+			float: left;
+		}
+
+		h1:nth-child(2){
+			background-color: white;
+			color: #b4d5d3;
+			border-radius: 20px;
+		}
+	}
+
+	#compteur{
+		
+		img:nth-child(1){
+			width: 240px;
+    		position: absolute;
+    		bottom: 30px;
+    		left: calc(50% - 120px);
+		}
+
+		img:nth-child(2){
+			transform: rotate(-25deg);
+    		bottom: 60px;
+    		position: absolute;
+    		margin-left: 28px;
+    		width: 139px;
+    		left: calc(50% - 120px);
+    		transition:transform 0.1s ease;
+		}
+
+		img:nth-child(3){
+			transform: rotate(80deg);
+			bottom: 73px;
+			margin-left: 127px;
+			width: 110px;
+			left: calc(50% - 120px);
+			position: absolute;
+		}
+	}
+
+	
+
+}
+
+#ui-photo{
+	#jumelles{
+		cursor: none;
+	    position: absolute;
+	    display: none;
+	    height: 4096px;
+	    width: 4096px;
+	    top: calc(50% - 2048px);
+	    left: calc(50% - 2048px);
+	}
+}
+
+#ui-end{
+	background-color: #FDE9AA;
+	
+
+	#end-sun{
+	    background-image: url("../textures/end/sun-end.png");
+	    height: 300px;
+	    width: 300px;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    left: calc( 50% - 150px);
+	    top: calc( 35% - 150px);
+	    position: absolute;
+	}
+
+	#intro-text{
+		color: #ffa879;
+	    text-align: center;
+	    top: 50%;
+	    position: absolute;
+	    width: 65%;
+	    font-family: 'futura_ltbold';
+	    font-size: 3vw;
+	    margin-left: 17.5%;
+	    margin-right: 17.5%;
+	    line-height: 3.7vw;
+	    letter-spacing: 0.2vw;
+	}
+
+	#partageBox{
+		text-align: center;
+	    bottom: 32%;
+	    position: absolute;
+	    width: 100%;
+
+	    h3{
+	    	color:#77b6c2;
+			font-family: 'futura';
+			font-style: italic;
+			font-weight: bold;
+	    }
+	 
+		ul{
+			width: 20%;
+			margin-left:40%;
+			margin-right:40%;
+			margin-top: 50px;
+			position: absolute;
+
+			li{
+				width: 15%;
+			    margin-left: calc(9% - 2px);
+			    margin-right: calc(9% - 2px);
+			    float: left;
+			    background-color: #2b3255;
+			    padding-top: 5%;
+			    padding-bottom: 5%;
+			    border-radius: 360px;
+			    border: solid 2px #77b6c2;
+			}
+		}
+
+	}
+}
+
+#ui-photoBack{
+
+	#flash{
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: white;
+	    opacity: 0;
+	}
+
+	#contentCard{
+		display: none;
+	    width: 24vh;
+	    top: 48%;
+	    position: absolute;
+	    left: calc(50% - 26vh);
+
+	    textarea{
+		    border: none;
+		    width: 85%;
+		    font-family: 'ColdSpaghettiBTN';
+		    color: #97d0d1;
+		    font-size: 1.2em;
+		    line-height: 33px;
+		    letter-spacing: 2px;
+		    resize: none;
+
+		    &:focus{
+		    	border:none;
+		    	outline: none !important;
+		    }
+
+	    }
+	}
+
+}
+
+#introGrad{
+	background: url('../textures/intro/grad_intro.png');
+
+}
+
+#carGrad{
+	background: url('../textures/car/grad_car.png');
+
+}
+
+#lapTopGrad{
+	background: url('../textures/Laptop_Floor.jpg');
+
+}
+
+#suitCaseGrad{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,74b4c0+0,fce9a7+100 */
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(top, #1e5799 0%, #74b4c0 0%, #fce9a7 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(0%,#74b4c0), color-stop(100%,#fce9a7)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #1e5799 0%,#74b4c0 0%,#fce9a7 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #1e5799 0%,#74b4c0 0%,#fce9a7 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #1e5799 0%,#74b4c0 0%,#fce9a7 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #1e5799 0%,#74b4c0 0%,#fce9a7 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#fce9a7',GradientType=0 ); /* IE6-9 */
+}
