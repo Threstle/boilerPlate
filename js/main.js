@@ -4,7 +4,7 @@ Loader.loadData('data/fr.json',function(data){
 
 	$(document).ready(function(){
 
-		$('body').append(home);
+		$('#home').append(home);
 	});
 
 
