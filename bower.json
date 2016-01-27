@@ -14,11 +14,8 @@
     "tests"
   ],
   "devDependencies": {
-    "dat-gui": "~0.5.1",
-    "Physijs": "physijs#*",
-    "gsap": "~1.18.0",
-    "threex": "*",
-    "threex.videotexture": "*",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3",
+    "handlebars": "~3.0.0"
   }
 }
